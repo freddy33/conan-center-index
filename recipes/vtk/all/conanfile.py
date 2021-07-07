@@ -41,7 +41,7 @@ class VtkConan(ConanFile):
                        "vtk_group_enable_web": "DEFAULT",
                        "fPIC": True}
     generators = "cmake"
-    version = "9.0.1"
+    version = "9.0.2"
 
     _cmake = None
 
@@ -59,7 +59,7 @@ class VtkConan(ConanFile):
 
     def source(self):
         if self.version is None:
-            self.version = "9.0.1"
+            self.version = "9.0.2"
         tools.get(**self.conan_data["sources"][self.version],
                   strip_root=True, destination=self._source_subfolder)
 
